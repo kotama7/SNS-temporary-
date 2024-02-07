@@ -10,7 +10,7 @@ services:
     volumes:
       - .:/root/workdir
       - type: bind
-        source: "~/.ssh/id_rsa"
+        source: $GIT_PRIVATE_KEY
         target: "/root/.ssh/id_rsa"
     working_dir: /root/workdir
     tty: true

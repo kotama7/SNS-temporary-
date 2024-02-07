@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  workdir:
+    build: .
+    env_file:
+      - .env/public.env
+      - .env/secret.env
+    platform: linux/amd64
+    volumes:
+      - .:/root/workdir
+      - type: bind
+        source: "~/.ssh/id_rsa"
+        target: "/root/.ssh/id_rsa"
+    working_dir: /root/workdir
+    tty: true

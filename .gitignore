@@ -159,6 +159,10 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+<<<<<<< HEAD
 */.ssl/*
+=======
+*/.ssl/*.key
+>>>>>>> 0d9c84e11ffb28b6ca8c2adacede662bc8a31ec3
 
 */.env/secret.env

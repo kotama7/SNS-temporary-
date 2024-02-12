@@ -8,9 +8,12 @@ services:
       dockerfile: Dockerfile
     platform: linux/amd64
     volumes:
+      - ./backend:/usr/src/app
       - type: bind
         source: $GIT_PRIVATE_KEY
         target: "/root/.ssh/id_rsa"
+    working_dir: /usr/src/app
+    command: /bin/bash
     tty: true
 
   frontend:
@@ -19,7 +22,12 @@ services:
       dockerfile: Dockerfile
     platform: linux/amd64
     volumes:
+      - ./frontend:/usr/src/app
       - type: bind
         source: $GIT_PRIVATE_KEY
         target: "/root/.ssh/id_rsa"
+    ports:
+      - "3000:3000"
+    working_dir: /usr/src/app
+    command: /bin/bash
     tty: true

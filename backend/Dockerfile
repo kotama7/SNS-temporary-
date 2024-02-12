@@ -1,9 +1,5 @@
 FROM python:latest
 
-WORKDIR /usr/src/app
-
-COPY . .
-
 RUN apt-get update -y \
     && apt-get upgrade -y \
     && apt-get install -y git \
@@ -11,6 +7,8 @@ RUN apt-get update -y \
 
 RUN pip install --upgrade pip
 
+ADD ./requirements.txt /requirements.txt
+
 RUN pip install -r ./requirements.txt
 
-CMD [ "sh", "./shell/main.sh" ]
+ENTRYPOINT [ "sh", "./shell/main.sh" ]

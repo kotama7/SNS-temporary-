@@ -6,29 +6,20 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    env_file:
-      - backend/.env/public.env
-      - backend/.env/secret.env
     platform: linux/amd64
     volumes:
-      - ./backend:/usr/src/app
       - type: bind
         source: $GIT_PRIVATE_KEY
         target: "/root/.ssh/id_rsa"
-    working_dir: /usr/src/app
     tty: true
 
   frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    env_file:
-      - frontend/.env/
     platform: linux/amd64
     volumes:
-      - ./frontend:/usr/src/app
       - type: bind
         source: $GIT_PRIVATE_KEY
         target: "/root/.ssh/id_rsa"
-    working_dir: /usr/src/app
     tty: true

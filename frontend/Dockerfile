@@ -7,4 +7,8 @@ RUN apt-get update -y \
 
 RUN sudo apt install -y openssl
 
-RUN sh -c "./shell/init.sh"
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN sh -c ./shell/init.sh

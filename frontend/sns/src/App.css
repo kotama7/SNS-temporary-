@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* グローバルスタイル */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #f5f8fa;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+/* ログインフォームコンテナ */
+div {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 入力フィールド */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* ログインボタン */
+button {
+  background-color: #1da1f2;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* ログインボタンホバー時 */
+button:hover {
+  background-color: #0d8ecf;
+}
+
+/* フォームラベル */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* パスワード入力フィールドアイコン */
+.password::before {
+  content: url('https://img.icons8.com/material-outlined/24/000000/lock.png');
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* メールアドレス入力フィールドアイコン */
+.email::before {
+  content: url('https://img.icons8.com/material-outlined/24/000000/mail.png');
+  display: inline-block;
+  margin-right: 5px;
 }

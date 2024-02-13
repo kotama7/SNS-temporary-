@@ -38,7 +38,9 @@ function LoginForm(session_params: AtpSessionProps) {
       <button
         className='login'
         onClick={() => LoginButton(email, password, session_params.setSession)}
-      />
+      >
+        ログイン
+      </button>
     </div>
   );
 }

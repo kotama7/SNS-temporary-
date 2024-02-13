@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import LoginForm, {AtpSessionProps} from './login/loginform';
 import HOME from './home/home';

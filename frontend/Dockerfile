@@ -7,6 +7,8 @@ RUN apt-get update -y \
 
 RUN sudo apt install -y openssl
 
-RUN yarn install
+WORKDIR /usr/src/app
+
+RUN cd ./sns && yarn install
 
 ENTRYPOINT ["sh", "./shell/init.sh"]

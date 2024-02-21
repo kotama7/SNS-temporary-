@@ -28,6 +28,8 @@ services:
       # - type: bind
       #   source: $GIT_PRIVATE_KEY
       #   target: "/root/.ssh/id_rsa"
+    environment:
+      - DEBUG=1
     ports:
       - "$MACHINE_PORT:3000"
     working_dir: /usr/src/app

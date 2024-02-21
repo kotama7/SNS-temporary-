@@ -1,4 +1,4 @@
-if [ ! -f $SSL_FILE ]; then
+if [ ! -f "./.ssl/server.key" ]; then
     openssl genrsa 2048 > ./.ssl/server.key
     echo -e "\n" | openssl req -new -key ./.ssl/server.key -out ./.ssl/server.csr
 fi

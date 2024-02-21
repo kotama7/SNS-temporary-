@@ -9,9 +9,9 @@ services:
     platform: linux/amd64
     volumes:
       - ./backend:/usr/src/app
-      - type: bind
-        source: $GIT_PRIVATE_KEY
-        target: "/root/.ssh/id_rsa"
+      # - type: bind
+      #   source: $GIT_PRIVATE_KEY
+      #   target: "/root/.ssh/id_rsa"
     working_dir: /usr/src/app
     command: /bin/bash
     tty: true
@@ -25,9 +25,9 @@ services:
     platform: linux/amd64
     volumes:
       - ./frontend:/usr/src/app
-      - type: bind
-        source: $GIT_PRIVATE_KEY
-        target: "/root/.ssh/id_rsa"
+      # - type: bind
+      #   source: $GIT_PRIVATE_KEY
+      #   target: "/root/.ssh/id_rsa"
     ports:
       - "$MACHINE_PORT:3000"
     working_dir: /usr/src/app

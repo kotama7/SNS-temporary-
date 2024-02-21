@@ -14,7 +14,7 @@ function App() {
   
   return (
     <div className="App">
-      <LoginForm {...session_params}/>
+      <LoginForm {...session_params} />
       <HOME session={session}/>
     </div>
   );

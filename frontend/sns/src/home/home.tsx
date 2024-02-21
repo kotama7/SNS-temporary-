@@ -1,6 +1,7 @@
 import React from 'react';
 import {BskyAgent, AtpSessionData} from '@atproto/api';
 import Timeline from './timeline';
+import "./home.css";
 
 function HOME(props :{session: AtpSessionData | undefined}) {
   if (props.session === undefined) {

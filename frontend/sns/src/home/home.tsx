@@ -1,9 +1,9 @@
 import React from 'react';
 import {BskyAgent, AtpSessionData} from '@atproto/api';
-import Timeline from './timeline';
+import {Timeline, TimeLineInfo} from './timeline';
 import "./home.css";
 
-function HOME(props :{session: AtpSessionData | undefined}) {
+function HOME(props :TimeLineInfo) {
   if (props.session === undefined) {
     return (
       <div>
@@ -13,7 +13,7 @@ function HOME(props :{session: AtpSessionData | undefined}) {
 
   return (
     <div>
-      <Timeline session={props.session}/>
+      <Timeline props={props}/>
     </div>
   );
 }
